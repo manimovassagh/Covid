@@ -1,5 +1,6 @@
 import React from 'react'
-//before adding material ui
+//This component bring in all data from diffrent countries du to api
+//Api refrence is https://api.covid19api.com
 
 export default function CountriesStatus(props) {
     // console.log(props)

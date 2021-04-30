@@ -34,13 +34,12 @@ export default function HideAppBar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar color="secondary">
           <Toolbar>
             <Typography variant="h6"><i className="fa fa-viruses fa-2x"></i>  Covid 19 Status App</Typography>
           </Toolbar>
         </AppBar>
-      </HideOnScroll>
+    
       <Toolbar />
      
     </React.Fragment>
