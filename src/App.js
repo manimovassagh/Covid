@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
+import BottomNavigation from "./components/navigation/Navigate"
 //External Components--------------------------------------------------------------------------
 import Global from './components/Status/Global'
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
@@ -45,6 +45,7 @@ class App extends React.Component {
       <Router>
         <div>
           <AppBar />
+          <BottomNavigation />
           <div className="content">
             <Switch>
               <Route exact path="/">
