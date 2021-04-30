@@ -1,11 +1,14 @@
 import React from "react";
 import axios from "axios";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 //External Components--------------------------------------------------------------------------
 import Global from './components/Status/Global'
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
 import AppBar from './components/Header/AppBar'
 
+//Class Base Root Component with State definition
+//There are Two Parameters in state Covid for Global Data and countries for Specific Country Status
 class App extends React.Component {
   constructor() {
     super();
@@ -16,7 +19,7 @@ class App extends React.Component {
     };
   }
 
-// Fetching Data from API with axios---------------------------------------------------------------
+  // Fetching Data from API with axios---------------------------------------------------------------
 
   componentDidMount() {
     axios.get("https://api.covid19api.com/summary").then((data) =>
@@ -27,7 +30,7 @@ class App extends React.Component {
     );
   }
 
-//function to return Countries data from State and pass it to CountriesStatus Component--------------
+  //function to return Countries data from State and pass it to CountriesStatus Component--------------
 
   meinDatai() {
     return Object.entries(this.state.countries).map((element, id) => (
@@ -35,15 +38,26 @@ class App extends React.Component {
     ))
   }
 
-//main Render Area-----------------------------------------------------------------------------------
+  //main Render Area-----------------------------------------------------------------------------------
 
   render() {
     return (
-      <div>
-        <AppBar/>
-        <Global Global={this.state.covid} />
-        <div>{this.meinDatai()}</div>
-      </div>
+      <Router>
+        <div>
+          <AppBar />
+          <div className="content">
+            <Switch>
+              <Route exact path="/">
+                <Global Global={this.state.covid} />
+              </Route>
+              <Route path="/country">
+            <div>{this.meinDatai()}</div>
+
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </Router>
     );
   }
 }
