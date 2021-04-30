@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Global from './components/Status/Global'
-
+import CountriesStatus from './components/CountriesStatus/CountriesStatus'
 
 class App extends React.Component {
   constructor() {
@@ -22,22 +22,22 @@ class App extends React.Component {
     );
   }
 
+  meinDatai() {
+    return Object.entries(this.state.countries).map((element, id) => (
+      <CountriesStatus element={element} id={id} />
+    ))
+  }
+
+
   render() {
     return (
       <div>
-        <Global Global={this.state.covid}/>
-          <div>
-       {Object.entries(this.state.countries).map((element,id) => (
-         <div key={id}>
-           {element[1].Country} New Confirmed{element[1].NewConfirmed}
-           Total Confirmed{element[1].TotalConfirmed}
-           Total Death{element[1].TotalDeaths} Total Recovered
-           {element[1].TotalRecovered}
-         </div>
-       ))}
-     </div>
-    
-   </div>
+        <Global Global={this.state.covid} />
+        <div>
+          {this.meinDatai()}
+        </div>
+
+      </div>
     );
   }
 }
