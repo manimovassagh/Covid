@@ -24,10 +24,9 @@ class App extends React.Component {
 
   meinDatai() {
     return Object.entries(this.state.countries).map((element, id) => (
-      <CountriesStatus element={element} id={id} />
+      <CountriesStatus element={element} key={id} />
     ))
   }
-
 
   render() {
     return (
