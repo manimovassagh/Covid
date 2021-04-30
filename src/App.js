@@ -25,6 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Global Global={this.state.covid}/>
           <div>
        {Object.entries(this.state.countries).map((element,id) => (
          <div key={id}>
@@ -36,7 +37,6 @@ class App extends React.Component {
        ))}
      </div>
     
-     <Global Global={this.state.covid}/>
    </div>
     );
   }
