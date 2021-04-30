@@ -3,7 +3,7 @@ import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import BottomNavigation from "./components/navigation/Navigate"
 //External Components--------------------------------------------------------------------------
-import Global from './components/Status/Global'
+import GlobalStatus from './components/Status/GlobalStatus'
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
 import AppBar from './components/Header/AppBar'
 
@@ -49,7 +49,7 @@ class App extends React.Component {
           <div className="content">
             <Switch>
               <Route exact path="/">
-                <Global Global={this.state.covid} />
+                <GlobalStatus Global={this.state.covid} />
               </Route>
               <Route path="/country">
             <div>{this.meinDatai()}</div>

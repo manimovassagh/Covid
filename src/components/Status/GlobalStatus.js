@@ -6,8 +6,7 @@ import Typography from '@material-ui/core/Typography';
 export default function Global(props) {
     return (
         <div >
-            <Typography variant="h3" align="inherit">
-
+        <Typography variant="body1" align="inherit" color="secondary">
         NewConfirmed   {props.Global.NewConfirmed} <br/>
         NewDeaths {props.Global.NewDeaths} <br/>
         NewRecovered  {props.Global.NewRecovered} <br/>
