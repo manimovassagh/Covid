@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Global from './components/Status/Global'
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
+import HideAppBar from './components/Header/AppBar'
 
 class App extends React.Component {
   constructor() {
@@ -31,11 +32,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
+<HideAppBar/>
         <Global Global={this.state.covid} />
-        <div>
-          {this.meinDatai()}
-        </div>
-
+        <div>{this.meinDatai()}</div>
       </div>
     );
   }
