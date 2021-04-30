@@ -9,7 +9,7 @@ import axios from 'axios';
 
 function Status() {
     const [status, setStatus] = useState([])
-    const [dummi]=useState(1)
+    const [dummi] = useState(1)
 
     useEffect(() => {
         console.log('hello world')
@@ -24,7 +24,9 @@ function Status() {
 
     return (
         <div>
-            {status.ID}
+            {status.Countries.foreach(el=>{
+                console.log(el)
+            })}
         </div>
     )
 }
