@@ -55,18 +55,16 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/">
                 <CumulativeTable Cumulative={this.state.covid} />
-                <Grid container >
-                <Grid item xs={6} sm={3}>
-                <ChartHomeCumulative Cumulative={this.state.covid} />
-                </Grid>
-                <Grid item xs={6} sm={3}></Grid>
-                <ChartHomeDaily Cumulative={this.state.covid} />
-                
+                <Grid container justify="center" >
+                  <Grid >
+                    <ChartHomeCumulative Cumulative={this.state.covid} />
+                  </Grid>
+                  <Grid ></Grid>
+                  <ChartHomeDaily Cumulative={this.state.covid} />
                 </Grid>
               </Route>
               <Route path="/country">
                 <div>{this.meinDatai()}</div>
-
               </Route>
             </Switch>
           </div>
