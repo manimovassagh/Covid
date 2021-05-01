@@ -1,7 +1,11 @@
 import React from 'react'
+import { createMuiTheme } from '@material-ui/core/styles';
 
 //This component bring in all data from diffrent countries du to api
 //Api refrence is https://api.covid19api.com
+const theme = createMuiTheme();
+
+
 
 export default function CountriesStatus(props) {
     // const Country= props.element[1].Country
@@ -14,8 +18,8 @@ export default function CountriesStatus(props) {
     // const TotalConfirmed= props.element[1].TotalConfirmed
     // const TotalDeaths= props.element[1].TotalDeaths
     // const TotalRecovered= props.element[1].TotalRecovered
-
-    
+  
+    theme.spacing(2) // = 8 * 2
     return (
         <div key={props.id}>
             {props.element[1].Country} New Confirmed{props.element[1].NewConfirmed}
