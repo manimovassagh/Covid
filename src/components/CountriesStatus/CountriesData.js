@@ -10,13 +10,13 @@ export default function DataGridDemo(props) {
     // console.log(ArryCountriesdata)
     const columns = [
         { field: 'id', headerName: 'ID', width: 70 },
-        { field: 'Country', headerName: 'Country', width: 130 },
+        { field: 'Country', headerName: 'Country', width: 200 },
         { field: 'NewConfirmed', headerName: 'New Confirmed', width: 130 },
         { field: 'NewDeaths', headerName: 'New Deaths', width: 130 },
         { field: 'NewRecovered', headerName: 'New Recovered', width: 200 },
-        { field: 'TotalConfirmed', headerName: 'TotalC onfirmed', width: 200 },
+        { field: 'TotalConfirmed', headerName: 'Total Confirmed', width: 200 },
         { field: 'TotalDeaths', headerName: 'Total Deaths', width: 200 },
-        { field: 'TotalRecovered', headerName: 'TotalRecovered', width: 200 },
+        { field: 'TotalRecovered', headerName: 'Total Recovered', width: 200 },
 
     ];
 
@@ -44,8 +44,8 @@ export default function DataGridDemo(props) {
     return (
 
 
-        <div style={{ height: 400, width: '100%' }}>
-            <DataGrid rows={rows} columns={columns} pageSize={5} />
+        <div style={{ height: 650, width: '100%' }}>
+            <DataGrid rows={rows} columns={columns} pageSize={10} />
         </div>
     );
 }
