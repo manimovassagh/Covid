@@ -10,34 +10,29 @@ import {
 } from "recharts";
 
 
-export default function ChartHome(props) {
-    console.log(props.Cumulative.NewConfirmed)
+export default function ChartHomeCumulative(props) {
+console.log(props.Cumulative)
+    const NewConfirmed=props.Cumulative.NewConfirmed
+    const TotalConfirmed=props.Cumulative.TotalConfirmed
+    const NewDeaths=props.Cumulative.NewDeaths
+    const TotalDeaths=props.Cumulative.TotalDeaths
+    const NewRecovered=props.Cumulative.NewRecovered
+    const TotalRecovered=props.Cumulative.TotalRecovered
+
     const data = [
         {
-            name: "Page A",
-            Cumulative: 4000,
-            Daily: 2400,
+            name: "Total Confirmed",
+            Cumulative: TotalConfirmed,
         },
         {
-            name: "Page B",
-            Cumulative: 3000,
-            Daily: 1398,
+            name: "Total Recovered",
+            Cumulative: TotalRecovered,
         },
         {
-            name: "Page C",
-            Cumulative: 2000,
-            Daily: 9800,
+            name: "Total Deaths",
+            Cumulative: TotalDeaths,
         },
-        {
-            name: "Page D",
-            Cumulative: 2780,
-            Daily: 3908,
-        },
-        {
-            name: "Page E",
-            Cumulative: 1890,
-            Daily: 4800,
-        },
+   
     
     ];
     return (
@@ -58,7 +53,7 @@ export default function ChartHome(props) {
             <Tooltip />
             <Legend />
             <Bar dataKey="Cumulative" fill="#8884d8" />
-            <Bar dataKey="Daily" fill="#82ca9d" />
+           
         </BarChart>
     );
 }

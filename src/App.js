@@ -8,7 +8,7 @@ import BottomNavigation from "./components/navigation/Navigate"
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
 import AppBar from './components/Header/AppBar'
 import CumulativeTable from './components/FrontTable/FrontTable'
-import ChartHome from './components/Chart/ChartHome'
+import ChartHomeCumulative from './components/Chart/ChartHomeCumulative'
 
 
 //Class Base Root Component with State definition
@@ -54,7 +54,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/">
                 <CumulativeTable Cumulative={this.state.covid}/>
-                <ChartHome Cumulative={this.state.covid}/>
+                <ChartHomeCumulative Cumulative={this.state.covid}/>
               </Route>
               <Route path="/country">
             <div>{this.meinDatai()}</div>
