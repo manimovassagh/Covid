@@ -3,10 +3,9 @@ import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import BottomNavigation from "./components/navigation/Navigate"
 //External Components--------------------------------------------------------------------------
-import GlobalStatus from './components/Status/GlobalStatus'
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
 import AppBar from './components/Header/AppBar'
-
+import AcccessibleTable from './components/FrontTable/FrontTable'
 //Class Base Root Component with State definition
 //There are Two Parameters in state Covid for Global Data and countries for Specific Country Status
 class App extends React.Component {
@@ -49,7 +48,7 @@ class App extends React.Component {
           <div className="content">
             <Switch>
               <Route exact path="/">
-                <GlobalStatus Global={this.state.covid} />
+                <AcccessibleTable Cumulative={this.state.covid}/>
               </Route>
               <Route path="/country">
             <div>{this.meinDatai()}</div>
