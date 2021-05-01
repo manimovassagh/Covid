@@ -2,13 +2,14 @@ import React from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import BottomNavigation from "./components/navigation/Navigate"
-
+import Grid from '@material-ui/core/Grid';
 //External Components--------------------------------------------------------------------------
 
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
 import AppBar from './components/Header/AppBar'
 import CumulativeTable from './components/FrontTable/FrontTable'
 import ChartHomeCumulative from './components/Chart/ChartHomeCumulative'
+import ChartHomeDaily from './components/Chart/ChartHomeDaily'
 
 
 //Class Base Root Component with State definition
@@ -53,11 +54,18 @@ class App extends React.Component {
           <div className="content">
             <Switch>
               <Route exact path="/">
-                <CumulativeTable Cumulative={this.state.covid}/>
-                <ChartHomeCumulative Cumulative={this.state.covid}/>
+                <CumulativeTable Cumulative={this.state.covid} />
+                <Grid container >
+                <Grid item xs={6} sm={3}>
+                <ChartHomeCumulative Cumulative={this.state.covid} />
+                </Grid>
+                <Grid item xs={6} sm={3}></Grid>
+                <ChartHomeDaily Cumulative={this.state.covid} />
+                
+                </Grid>
               </Route>
               <Route path="/country">
-            <div>{this.meinDatai()}</div>
+                <div>{this.meinDatai()}</div>
 
               </Route>
             </Switch>

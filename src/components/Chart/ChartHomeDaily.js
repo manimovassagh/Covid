@@ -12,24 +12,24 @@ import {
 } from "recharts";
 
 
-export default function ChartHomeCumulative(props) {
+export default function ChartHomeDaily(props) {
 // console.log(props.Cumulative)
-    const TotalConfirmed=props.Cumulative.TotalConfirmed
-    const TotalDeaths=props.Cumulative.TotalDeaths
-    const TotalRecovered=props.Cumulative.TotalRecovered
+    const NewConfirmed=props.Cumulative.NewConfirmed
+    const NewDeaths=props.Cumulative.NewDeaths
+    const NewRecovered=props.Cumulative.NewRecovered
 
     const data = [
         {
-            status: "Total Confirmed",
-            Cumulative: TotalConfirmed,
+            status: "New Confirmed",
+            Daily: NewConfirmed,
         },
         {
-            status: "Total Recovered",
-            Cumulative: TotalRecovered,
+            status: "New Recovered",
+            Daily: NewRecovered,
         },
         {
-            status: "Total Deaths",
-            Cumulative: TotalDeaths,
+            status: "New Deaths",
+            Daily: NewDeaths,
         },
    
     
@@ -51,7 +51,7 @@ export default function ChartHomeCumulative(props) {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="Cumulative" fill="#8884d8" />
+            <Bar dataKey="Daily" fill="#8884d8" />
             <LabelList dataKey="status" position="top" />
 
         </BarChart>
