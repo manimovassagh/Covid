@@ -23,8 +23,7 @@ function createData(name, NumberOfData) {
 }
 
 
-export default function AcccessibleTable(props) {
-    console.log(props.Cumulative.NewConfirmed)
+export default function CumulativeTable(props) {
     const rows = [
         createData('New Confirmed ', props.Cumulative.NewConfirmed),
         createData('Total Confirmed ', props.Cumulative.TotalConfirmed),
