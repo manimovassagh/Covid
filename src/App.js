@@ -3,6 +3,7 @@ import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import BottomNavigation from "./components/navigation/Navigate"
 import Grid from '@material-ui/core/Grid';
+
 //External Components--------------------------------------------------------------------------
 
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
@@ -10,7 +11,7 @@ import AppBar from './components/Header/AppBar'
 import CumulativeTable from './components/FrontTable/FrontTable'
 import ChartHomeCumulative from './components/Chart/ChartHomeCumulative'
 import ChartHomeDaily from './components/Chart/ChartHomeDaily'
-
+import DataGridDemo from './components/CountriesStatus/CountriesData'
 
 //Class Base Root Component with State definition
 //There are Two Parameters in state Covid for Global Data and countries for Specific Country Status
@@ -64,6 +65,7 @@ class App extends React.Component {
                 </Grid>
               </Route>
               <Route path="/country">
+                <DataGridDemo countryData={this.state.countries}/>
                 <div>{this.meinDatai()}</div>
               </Route>
             </Switch>
