@@ -66,7 +66,7 @@ class App extends React.Component {
               </Route>
               <Route path="/country">
                 <DataGridDemo countryData={this.state.countries}/>
-                <div>{this.meinDatai()}</div>
+               
               </Route>
             </Switch>
           </div>

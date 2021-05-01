@@ -24,19 +24,18 @@ export default function DataGridDemo(props) {
     let IdCounter = 0
     for (const countires of ArryCountriesdata) {
         IdCounter++
-        dataBank.push({ id: IdCounter, Country: countires.Country, NewConfirmed: countires.NewConfirmed })
+        dataBank.push({ id: IdCounter, 
+            Country: countires.Country, 
+            NewConfirmed: countires.NewConfirmed,
+            NewDeaths:countires.NewDeaths,
+            NewRecovered:countires.NewRecovered,
+            TotalConfirmed:countires.TotalConfirmed,
+            TotalDeaths:countires.TotalDeaths,
+            TotalRecovered:countires.TotalRecovered,
+        })
 
     }
-    const rows = [
-
-        { id: 1, Country: 'Iran', NewConfirmed: 44, NewDeaths: 49, NewRecovered: 58, TotalConfirmed: 22, TotalDeaths: 36, TotalRecovered: 44, },
-        { id: 2, Country: 'Iran', NewConfirmed: 44, NewDeaths: 49, NewRecovered: 58, TotalConfirmed: 22, TotalDeaths: 36, TotalRecovered: 44, },
-        { id: 3, Country: 'Iran', NewConfirmed: 44, NewDeaths: 49, NewRecovered: 58, TotalConfirmed: 22, TotalDeaths: 36, TotalRecovered: 44, },
-        { id: 4, Country: 'Iran', NewConfirmed: 44, NewDeaths: 49, NewRecovered: 58, TotalConfirmed: 22, TotalDeaths: 36, TotalRecovered: 44, },
-        { id: 5, Country: 'Iran', NewConfirmed: 44, NewDeaths: 49, NewRecovered: 58, TotalConfirmed: 22, TotalDeaths: 36, TotalRecovered: 44, },
-        { id: 6, Country: 'Iran', NewConfirmed: 44, NewDeaths: 49, NewRecovered: 58, TotalConfirmed: 22, TotalDeaths: 36, TotalRecovered: 44, },
-
-    ];
+    const rows = dataBank
     console.log(dataBank)
 
 
