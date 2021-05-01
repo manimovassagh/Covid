@@ -1,9 +1,19 @@
 import * as React from 'react';
 import { DataGrid } from '@material-ui/data-grid';
+import {  GridToolbarContainer,GridToolbarExport,} from '@material-ui/data-grid';
+import Grid from '@material-ui/core/Grid';
 
+
+function CustomToolbar() {
+  return (
+    <GridToolbarContainer>
+      <GridToolbarExport />
+    </GridToolbarContainer>
+  );
+}
 
 export default function DataGridDemo(props) {
-
+    
     //Grab fetched Data and Save it to Array to work easier
     const CountriesData = Object.entries(props)
     const ArryCountriesdata = CountriesData[0][1]
@@ -19,12 +29,12 @@ export default function DataGridDemo(props) {
         { field: 'TotalRecovered', headerName: 'Total Recovered', width: 200 },
 
     ];
-
-    const dataBank = []
+    const rows = []
+    const setDataInArray=()=>{
     let IdCounter = 0
     for (const countires of ArryCountriesdata) {
         IdCounter++
-        dataBank.push({ id: IdCounter, 
+        rows.push({ id: IdCounter, 
             Country: countires.Country, 
             NewConfirmed: countires.NewConfirmed,
             NewDeaths:countires.NewDeaths,
@@ -33,19 +43,25 @@ export default function DataGridDemo(props) {
             TotalDeaths:countires.TotalDeaths,
             TotalRecovered:countires.TotalRecovered,
         })
-
-    }
-    const rows = dataBank
-    console.log(dataBank)
-
-
-
-
+}
+}
+    setDataInArray()
+  
     return (
-
+<Grid
+  container
+  direction="row"
+  justify="center"
+  alignItems="center"
+ 
+>
 
         <div style={{ height: 650, width: '100%' }}>
-            <DataGrid rows={rows} columns={columns} pageSize={10} />
+            <DataGrid rows={rows} columns={columns} pageSize={10} 
+        components={{
+          Toolbar: CustomToolbar,
+        }} />
         </div>
+         </Grid>
     );
 }
