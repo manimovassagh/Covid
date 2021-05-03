@@ -24,7 +24,7 @@ function createData(Description, NumberOfData) {
 }
 
 //I defined this Function to make Thousend Seprater for Displayed Numbers
-const ThousendSeprater=(x=1)=> {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");}
+const ThousendSeprater = (x = 1) => { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
 
 
 export default function CumulativeTable(props) {
@@ -58,8 +58,7 @@ export default function CumulativeTable(props) {
                                     <TableCell component="th" scope="row" align="left">
                                         <Typography variant="h6" gutterBottom color="secondary">
                                             {row.Description}
- 
-                                    </Typography>
+                                        </Typography>
                                     </TableCell>
                                     <TableCell align="left">
                                         <Typography variant="h6" gutterBottom color="secondary">
