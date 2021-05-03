@@ -34,7 +34,7 @@ export default function HideAppBar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-        <AppBar color="secondary">
+        <AppBar color="primary">
           <Toolbar>
             <Typography variant="h6"><i className="fa fa-viruses fa-2x"></i>  Covid 19 Status App</Typography>
           </Toolbar>

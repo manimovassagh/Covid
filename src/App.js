@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 
 import CountriesStatus from './components/CountriesStatus/CountriesStatus'
 import AppBar from './components/Header/AppBar'
-import CumulativeTable from './components/FrontTable/FrontTable'
+import CumulativeTable from './components/FrontTable/CumulativeTable'
 import ChartHomeCumulative from './components/Chart/ChartHomeCumulative'
 import ChartHomeDaily from './components/Chart/ChartHomeDaily'
 import DataGridDemo from './components/CountriesStatus/CountriesData'
