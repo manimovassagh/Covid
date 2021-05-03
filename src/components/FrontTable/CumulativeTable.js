@@ -53,12 +53,12 @@ export default function CumulativeTable(props) {
                         {rows.map((row) => (
                             <TableRow key={row.Description}>
                                 <TableCell component="th" scope="row" align="left">
-                                    <Typography variant="h6" gutterBottom>
+                                    <Typography variant="h6" gutterBottom color="secondary">
                                         {row.Description}
                                     </Typography>
                                 </TableCell>
                                 <TableCell align="left">
-                                <Typography variant="h6" gutterBottom>
+                                <Typography variant="h6" gutterBottom color="secondary">
                                     {row.NumberOfData}
                                     </Typography>
                                     </TableCell>

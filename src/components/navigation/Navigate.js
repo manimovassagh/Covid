@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles({
     root: {
@@ -26,7 +25,7 @@ export default function SimpleBottomNavigation() {
             showLabels
             className={classes.marginAutoContainer}
         >
-            <BottomNavigationAction component={Link} to={'/'} label="Back to Home" icon={<RestoreIcon />} />
+            <BottomNavigationAction component={Link} to={'/'} label="Home" icon={<HomeIcon />} />
             <BottomNavigationAction component={Link} to={'/country'} label="Got to Countries" icon={<LocationOnIcon />} />
         </BottomNavigation>
     );

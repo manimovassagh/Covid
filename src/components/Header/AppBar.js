@@ -36,7 +36,7 @@ export default function HideAppBar(props) {
       <CssBaseline />
         <AppBar color="primary">
           <Toolbar>
-            <Typography variant="h6"><i className="fa fa-viruses fa-2x"></i>  Covid 19 Status App</Typography>
+            <Typography variant="h6"><i className="fa fa-viruses fa-2x"></i>  Covid-19 Statistics</Typography>
           </Toolbar>
         </AppBar>
     
