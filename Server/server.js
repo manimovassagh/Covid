@@ -10,6 +10,6 @@ app.use(cors())
 
 app.listen(80, err => console.log(err || 'Server läuft'));
 app.get('./', (req, res) => {
-    res.send('this is my server')
+res.send('this is my server')
   
 })
