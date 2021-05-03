@@ -1,16 +1,17 @@
 import React from "react";
-import {
-    BarChart,
-    Bar,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Legend,
-    LabelList,
-  
-} from "recharts";
 
+//import React Chart Library Source https://recharts.org/------------------
+import {BarChart} from "recharts";
+import {Bar} from "recharts";
+import {XAxis} from "recharts";
+import {YAxis} from "recharts";
+import {CartesianGrid} from "recharts";
+import {Tooltip} from "recharts";
+import {Legend} from "recharts";
+import {LabelList} from "recharts";
+
+
+//Cumulative Chart component------------------------------------------------
 
 export default function ChartHomeDaily(props) {
 // console.log(props.Cumulative)

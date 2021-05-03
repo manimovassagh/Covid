@@ -35,15 +35,20 @@ export default function CumulativeTable(props) {
     const classes = useStyles();
 
     return (
+        <>
+            <Typography variant="h3" align="center" color="primary">
+                Latest Global Corona Pandemie Status
+            </Typography>
+        
         <Grid
             container
             direction="row"
             justify="center"
             alignItems="center"
         >
+
             <TableContainer component={Paper} style={{ width: 800 }}>
                 <Table className={classes.table} aria-label="caption table">
-
                     <TableBody >
                         {rows.map((row) => (
                             <TableRow key={row.Description}>
@@ -63,5 +68,6 @@ export default function CumulativeTable(props) {
                 </Table>
             </TableContainer>
         </Grid>
+        </>
     );
 }
