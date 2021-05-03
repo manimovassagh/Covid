@@ -53,6 +53,7 @@ class App extends React.Component {
       <Router>
         <div>
           <AppBar />
+        
           <BottomNavigation />
           <div className="content">
             <Switch>

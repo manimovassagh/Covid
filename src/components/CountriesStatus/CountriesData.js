@@ -50,8 +50,8 @@ export default function DataGridDemo(props) {
 
   return (
     <Grid container direction="row" justify="center"  >
-      <div style={{ height: 650, width: '100%' }}>
-        <DataGrid align="center" rows={rows} columns={columns} pageSize={10}
+      <div style={{ height: 700, width: '100%' ,marginRight:50 ,marginLeft:50}}>
+        <DataGrid align="center" rows={rows} columns={columns} pageSize={10} 
           components={{
             Toolbar: CustomToolbar,
           }} />
