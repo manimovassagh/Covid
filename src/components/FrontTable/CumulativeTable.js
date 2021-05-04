@@ -24,7 +24,7 @@ function createData(Description, NumberOfData) {
 }
 
 //I defined this Function to make Thousend Seprater for Displayed Numbers
-const ThousendSeprater = (x = 1) => { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+const ThousendSeprater = (x = 'Loading') => { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
 
 
 export default function CumulativeTable(props) {
@@ -42,14 +42,12 @@ export default function CumulativeTable(props) {
             <Typography variant="h3" align="center" color="primary">
                 Latest Global Corona Pandemie Status
             </Typography>
-
             <Grid
                 container
                 direction="row"
                 justify="center"
                 alignItems="center"
             >
-
                 <TableContainer component={Paper} style={{ width: 800 }}>
                     <Table className={classes.table} aria-label="caption table">
                         <TableBody >

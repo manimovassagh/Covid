@@ -29,4 +29,4 @@ app.get('/signup', (req, res) => {
 
 // Define Ports and heroku settings--------------------
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(PORT,(err)=>console.log( err || 'Server Working Smooth!'));
