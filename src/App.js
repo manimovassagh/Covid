@@ -14,7 +14,6 @@ import CumulativeTable from './components/FrontTable/CumulativeTable'
 import ChartHomeCumulative from './components/Chart/ChartHomeCumulative'
 import ChartHomeDaily from './components/Chart/ChartHomeDaily'
 import DataGridDemo from './components/CountriesStatus/CountriesData'
-import Fetchserver from './components/fetchserver/fetchserver'
 
 //Class Base Root Component with State definition
 //There are Two Parameters in state Covid for Global Data and countries for Specific Country Status
@@ -55,7 +54,6 @@ class App extends React.Component {
         <div>
           <AppBar />
           <BottomNavigation />
-          <Fetchserver/>
           <div className="content">
             <Switch>
               <Route exact path="/">
