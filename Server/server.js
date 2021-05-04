@@ -3,22 +3,18 @@ const express = require('express');
 const fs = require('fs')
 const app = express();
 
+//Define routers-------------------------
 
+app.get('/',(req,res)=>{
+    fs.readFile('test.json',(err,data)=>{
+        if(err) throw err;
+        else {
+            res.send(data.toString())
+        }
+    })
 
-
-
-
-//define routers
-// app.get('/', (req, res) => {
-//     fs.readFile('test.json', (err, data) => {
-//         if (err) throw err;
-//         else
-//         res.send(data.toString())
-        
-//     });
-    // console.log('request made')
-// })
-app.get('/', (req, res) => {
+})
+app.get('/greeting', (req, res) => {
     res.send({ hi: 'there' })
 })
 app.get('/login', (req, res) => {
@@ -31,6 +27,6 @@ app.get('/signup', (req, res) => {
     res.send({ userSignup: 'Signup from this place' })
 })
 
-// define Ports and heroku settings
+// Define Ports and heroku settings--------------------
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
