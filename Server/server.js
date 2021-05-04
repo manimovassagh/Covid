@@ -1,12 +1,18 @@
 'use strict';
 const express = require('express');
 let cors = require('cors')
-let app = express();
+const app = express();
 
-console.log('this is server')
 app.use(cors())
 
-app.listen(80, err => console.log(err || 'Server läuft'));
-app.get('/', function (req, res) {
-    res.send('GET request to the homepage')
+app.get('/', (req,res)=>{
+    res.send({hi:'there'})
+    console.log(res)
+   })
+app.get('/login', (req,res)=>{
+    res.send({user:'tried to login'})
 })
+app.get('/logout', (req,res)=>{
+    res.send({user:'tried to logout'})
+})
+app.listen(5000, err => console.log(err || 'Server läuft'));
