@@ -1,32 +1,34 @@
 'use strict';
 const express = require('express');
 const fs = require('fs')
-const cors = require('cors')
 const app = express();
 
-//middlewares
-app.use(cors())
+
+
 
 
 
 //define routers
-app.get('/', (req, res) => {
-    fs.readFile('test.json', (err, data) => {
-        if (err) throw err;
-        else
-        res.send(data.toString())
+// app.get('/', (req, res) => {
+//     fs.readFile('test.json', (err, data) => {
+//         if (err) throw err;
+//         else
+//         res.send(data.toString())
         
-    });
+//     });
     // console.log('request made')
+// })
+app.get('/', (req, res) => {
+    res.send({ hi: 'there' })
 })
 app.get('/login', (req, res) => {
-    res.send({ user: 'tried to login' })
+    res.send({ userLogin: 'tried to login' })
 })
 app.get('/logout', (req, res) => {
-    res.send({ user: 'tried to logout' })
+    res.send({ userLogout: 'tried to logout' })
 })
 app.get('/signup', (req, res) => {
-    res.send({ user: 'Signup from this place' })
+    res.send({ userSignup: 'Signup from this place' })
 })
 
 // define Ports and heroku settings
