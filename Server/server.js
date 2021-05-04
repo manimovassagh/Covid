@@ -1,8 +1,10 @@
 'use strict';
 const express = require('express');
 const fs = require('fs')
-let cors = require('cors')
+const cors = require('cors')
 const app = express();
+
+//middlewares
 app.use(cors())
 
 
