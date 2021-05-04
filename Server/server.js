@@ -7,7 +7,7 @@ app.use(cors())
 
 app.get('/', (req,res)=>{
     res.send({hi:'there'})
-    console.log(res)
+    console.log('request made')
    })
 app.get('/login', (req,res)=>{
     res.send({user:'tried to login'})
