@@ -33,14 +33,13 @@ HideOnScroll.propTypes = {
 export default function HideAppBar(props) {
   return (
     <React.Fragment>
-        <AppBar color="primary">
-          <CssBaseline/>
-          <Toolbar>
-            <Typography variant="h6"><i className="fa fa-viruses fa-2x"></i>  Covid-19 Statistics</Typography>
-          </Toolbar>
-        </AppBar>
+      <AppBar color="primary">
+        <CssBaseline />
+        <Toolbar>
+          <Typography variant="h6"><i className="fa fa-viruses fa-2x"></i>  Covid-19 Statistics</Typography>
+        </Toolbar>
+      </AppBar>
       <Toolbar />
-          
     </React.Fragment>
   );
 }
