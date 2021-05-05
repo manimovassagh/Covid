@@ -1,7 +1,6 @@
 const express = require('express');
 require('./services/passport');
 
-
 //execute server
 const app = express();
 
